@@ -1,5 +1,5 @@
-package BestBuyReceiptDesign;
-
+package Assignment3_Receipt;
+/////
 public class Decorator implements Receipt {
     private Receipt trailer;
 

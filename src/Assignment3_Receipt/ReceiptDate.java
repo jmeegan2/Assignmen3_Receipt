@@ -1,6 +1,5 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
-import java.util.Date;
 public class ReceiptDate {
     private int month;
     private int date;

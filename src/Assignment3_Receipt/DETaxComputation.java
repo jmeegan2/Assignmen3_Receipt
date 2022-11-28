@@ -1,11 +1,11 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
 
-public class CATaxComputation extends TaxComputation {
+public class DETaxComputation extends TaxComputation{
     @Override
-    //No tax holiday, only returns the 7.25% of tax rate
+    //No tax at all, returns 0.
     public double computeTax(PurchasedItems items, ReceiptDate date) {
-        return 0.0725;
+        return 0;
     }
 
     @Override

@@ -1,5 +1,5 @@
-package BestBuyReceiptDesign;
-
+package Assignment3_Receipt;
+//////
 
 public interface AddOn {
     public boolean applies(PurchasedItems items);

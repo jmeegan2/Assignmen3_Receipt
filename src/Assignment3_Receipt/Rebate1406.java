@@ -1,4 +1,4 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
 
 public class Rebate1406 implements AddOn,Rebate {

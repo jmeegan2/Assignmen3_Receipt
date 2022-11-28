@@ -1,4 +1,4 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
 import java.util.*;
 public class Client {
@@ -10,6 +10,14 @@ public class Client {
         Scanner input = new Scanner(System.in);
         PurchasedItems items = new PurchasedItems();
         ReceiptFactory receiptFactory = new ReceiptFactory();
+
+        // Unix epoch date, will be overwritten if the user presses 1
+        // This is here so there is always a date for the receipt and no error will be thrown
+        int currentDate = 1;
+        int currentMonth = 1;
+        int currentYear = 1970;
+        receiptFactory.getDate(currentMonth,currentDate,currentYear);
+
         int choice;
         choice = menu(input, min, max);
         while (choice != 0) {
@@ -18,10 +26,6 @@ public class Client {
                 //Case 1 get the current date from users.
                 case 1:
                     items.clearReceipt();
-
-                    int currentDate = 0;
-                    int currentMonth = 0;
-                    int currentYear = 0;
 
                     System.out.print("Enter the month (enter value  1-12): ");
                     currentMonth = getInt(input,1,12);
@@ -86,20 +90,21 @@ public class Client {
         int ans;
         System.out.println("    Add items below to your cart.");
         System.out.println("\t--------------------------------------------------------\n" +
-                "\t1 – Camera $200 Item code:1406\n" +
-                "\t2 – T-shirt $58 Item code:1065\n" +
-                "\t3 – Computer $1,000 Item code:1087\n" +
-                "\t0 - Continue to Checkout\n" +
+                "\t1 – Television $450 \n" +
+                "\t2 – M1 Macbook Air $1150\n" +
+                "\t3 – Levi Jeans $35 #1406 item\n" +
+                "\t0 - Go to Checkout\n" +
                 "\t--------------------------------------------------------\n");
         System.out.print("    Enter your choice: ");
         ans = getInt(input, min, max);
 
         if(ans == 1)
-            items.addItem(new StoreItem("1406","Camera",200));
+            items.addItem(new StoreItem("1001","Television",450));
         else if(ans == 2)
-            items.addItem(new StoreItem("1065","T-shirt",58));
+            items.addItem(new StoreItem("1000","M1 Macbook Air",1150));
         else
-            items.addItem(new StoreItem("1087","Computer",1000));
+            //Only item eligible for maryland tax holiday, has to be clothing or footwear less than 100 dollars
+            items.addItem(new StoreItem("1406","Levi Jeans",35));
 
     }
 }

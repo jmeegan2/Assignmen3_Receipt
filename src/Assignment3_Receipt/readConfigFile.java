@@ -1,4 +1,4 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
 import java.io.FileInputStream;
 import java.util.Properties;

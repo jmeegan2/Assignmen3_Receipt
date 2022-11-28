@@ -1,11 +1,11 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
 
-public class DETaxComputation extends TaxComputation{
+public class CATaxComputation extends TaxComputation {
     @Override
-    //No tax at all, returns 0.
+    //7.25% of tax rate
     public double computeTax(PurchasedItems items, ReceiptDate date) {
-        return 0;
+        return 0.0725;
     }
 
     @Override

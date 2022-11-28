@@ -1,6 +1,5 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
-import javax.swing.plaf.basic.BasicCheckBoxMenuItemUI;
 import java.util.ArrayList;
 
 

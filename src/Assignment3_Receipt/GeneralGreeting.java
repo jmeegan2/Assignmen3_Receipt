@@ -1,4 +1,4 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
 
 public class GeneralGreeting implements AddOn,SecondaryHeading{
@@ -8,6 +8,6 @@ public class GeneralGreeting implements AddOn,SecondaryHeading{
         return true;
     }
     public String getLines(){
-        return "* Thanks for shopping with BestBuy*";
+        return "* Thanks for shopping with BestBuy *";
     }
 }

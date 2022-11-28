@@ -1,4 +1,4 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -48,6 +48,7 @@ public class ReceiptFactory{
         receiptDate = new ReceiptDate(month,date,year);
         return receiptDate;
     }
+
     public Receipt getReceipt(PurchasedItems items) {
 
         BasicReceipt basicReceipt = new BasicReceipt(items);
@@ -119,10 +120,10 @@ public class ReceiptFactory{
         try {
             //set the properties value
             prop.setProperty("header", "BestBuy");
-            prop.setProperty("store_num", "123");
-            prop.setProperty("store_addr", "Towson Dr");
-            prop.setProperty("phone","123456789");
-            prop.setProperty("state_code","CA");
+            prop.setProperty("store_num", "602");
+            prop.setProperty("store_addr", "Boulton St, Bel Air");
+            prop.setProperty("phone","1-443-987-1437");
+            prop.setProperty("state_code","MD");
 
 
             //save properties to project root folder

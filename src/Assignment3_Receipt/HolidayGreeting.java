@@ -1,4 +1,4 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
 
 public class HolidayGreeting implements AddOn,SecondaryHeading {

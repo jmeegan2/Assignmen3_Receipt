@@ -1,9 +1,6 @@
-package BestBuyReceiptDesign;
+package Assignment3_Receipt;
 
-import javax.swing.plaf.basic.BasicCheckBoxMenuItemUI;
-import javax.swing.plaf.basic.BasicIconFactory;
 import java.text.DecimalFormat;
-import java.util.Date;
 
 public class BasicReceipt implements Receipt {
     private String storeHeader; // store name
