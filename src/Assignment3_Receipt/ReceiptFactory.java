@@ -60,36 +60,36 @@ public class ReceiptFactory{
                 basicReceipt.setStateCode(state_code);
                 basicReceipt.setStoreHeader(header);
                 basicReceipt.setStateCode(state_code);
-                basicReceipt.setAddr(store_addr);
-                basicReceipt.setStore_num(store_num);
-                basicReceipt.setPhone(phone);
+                basicReceipt.setAddress(store_addr);
+                basicReceipt.setStoreNum(store_num);
+                basicReceipt.setPhoneNum(phone);
                 break;
             case "MA":
                 basicReceipt.setTaxComputation(new MATaxComputation());
                 basicReceipt.setStateCode(state_code);
                 basicReceipt.setStoreHeader(header);
                 basicReceipt.setStateCode(state_code);
-                basicReceipt.setAddr(store_addr);
-                basicReceipt.setStore_num(store_num);
-                basicReceipt.setPhone(phone);
+                basicReceipt.setAddress(store_addr);
+                basicReceipt.setStoreNum(store_num);
+                basicReceipt.setPhoneNum(phone);
                 break;
             case "DE":
                 basicReceipt.setTaxComputation(taxComputationsObjs[2]);
                 basicReceipt.setStateCode(state_code);
                 basicReceipt.setStoreHeader(header);
                 basicReceipt.setStateCode(state_code);
-                basicReceipt.setAddr(store_addr);
-                basicReceipt.setStore_num(store_num);
-                basicReceipt.setPhone(phone);
+                basicReceipt.setAddress(store_addr);
+                basicReceipt.setStoreNum(store_num);
+                basicReceipt.setPhoneNum(phone);
                 break;
             case "CA":
                 basicReceipt.setTaxComputation(taxComputationsObjs[3]);
                 basicReceipt.setStateCode(state_code);
                 basicReceipt.setStoreHeader(header);
                 basicReceipt.setStateCode(state_code);
-                basicReceipt.setAddr(store_addr);
-                basicReceipt.setStore_num(store_num);
-                basicReceipt.setPhone(phone);
+                basicReceipt.setAddress(store_addr);
+                basicReceipt.setStoreNum(store_num);
+                basicReceipt.setPhoneNum(phone);
                 break;
             default:
                 System.out.println("Invalid state");
@@ -120,9 +120,9 @@ public class ReceiptFactory{
         try {
             //set the properties value
             prop.setProperty("header", "BestBuy");
-            prop.setProperty("store_num", "602");
-            prop.setProperty("store_addr", "Boulton St, Bel Air");
-            prop.setProperty("phone","1-443-987-1437");
+            prop.setProperty("store_num", "143");
+            prop.setProperty("store_addr", "602 Boulton St, Bel Air");
+            prop.setProperty("phone","1-410-893-6101");
             prop.setProperty("state_code","MD");
 
 

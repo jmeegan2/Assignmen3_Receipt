@@ -1,20 +1,20 @@
 package Assignment3_Receipt;
 
 import java.text.DecimalFormat;
-
+////////
 public class BasicReceipt implements Receipt {
     private String storeHeader; // store name
-    private String stateCode; // MD, DE, CA or MA
-    private String phone; // store phone
-    private String addr; // store address
-    private String store_num; // store number
+    private String stateCode; // MD, DE, CA,MA
+    private String phoneNum; // store phone
+    private String address; // store address
+    private String storeNum; // store number
 
 
 
     private PurchasedItems items;
     private ReceiptDate date;
     private TaxComputation taxComputation;
-    private static DecimalFormat df2 = new DecimalFormat("0.00#");
+    private static DecimalFormat decimalFormat = new DecimalFormat("0.00#");
 
 
     //Alternate Constructor
@@ -50,25 +50,28 @@ public class BasicReceipt implements Receipt {
         return subTotalCost()*taxComputation.computeTax(items,date);
     }
 
-    public void setAddr(String addr) {
-        this.addr = addr;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
     }
 
-    public void setStore_num(String store_num) {
-        this.store_num = store_num;
+    public void setStoreNum(String storeNum) {
+        this.storeNum = storeNum;
     }
 
     @Override
     public void prtReceipt() {
-        System.out.println(storeHeader + "\n"+ store_num + " " +  addr + " " + stateCode + "\n" + phone);
+
+        System.out.println(storeHeader + " (Store #" + storeNum +")" + "\n" + "Address: " + address + " " + stateCode +
+                "\n" +"Phone Number: " + phoneNum);
         System.out.println("Item purchased on: " + date );
-        items.printItems();
-        System.out.println("Subtotal Cost: $" + df2.format(subTotalCost()));
-        System.out.println("Tax: $" + df2.format(setTax()));
-        System.out.println("Total Cost: $"+ df2.format(subTotalCost()+setTax()));
+        items.printItems(); //items will be display when method called
+        System.out.println("Subtotal Cost: $" + decimalFormat.format(subTotalCost()));
+        System.out.println("Tax: $" + decimalFormat.format(setTax()));
+        System.out.println("Total Cost: $"+ decimalFormat.format(subTotalCost()+setTax()));
+
     }
 }
