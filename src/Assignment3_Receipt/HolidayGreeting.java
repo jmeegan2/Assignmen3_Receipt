@@ -1,11 +1,11 @@
 package Assignment3_Receipt;
 
-
+////
 public class HolidayGreeting implements AddOn,SecondaryHeading {
     public boolean applies(PurchasedItems items){
         return true;
     }
     public String getLines(){
-        return "* Happy Holidays from BestBuy*";
+        return "* Happy Holidays from BestBuy *";
     }
 }

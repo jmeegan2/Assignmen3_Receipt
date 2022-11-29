@@ -10,7 +10,7 @@ public class readConfigFile {
     public readConfigFile(){
         try {
             configFile = new java.util.Properties();
-            configFile.load(new FileInputStream("config.properties"));
+            configFile.load(new FileInputStream("configuration.properties"));
         }catch(Exception eta){
             eta.printStackTrace();
         }

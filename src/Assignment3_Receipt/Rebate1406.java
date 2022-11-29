@@ -1,6 +1,6 @@
 package Assignment3_Receipt;
 
-
+////
 public class Rebate1406 implements AddOn,Rebate {
 
     public boolean applies(PurchasedItems items){
@@ -8,6 +8,6 @@ public class Rebate1406 implements AddOn,Rebate {
     }
 
     public String getLines(){
-        return "Mail-in Rebate for item#1065\n"+ "Mail to: BestBuy Rebates, P.O Box 1400, Orlando, FL";
+        return "Mail-in Rebate for item #1406\n"+ "Mail to: BestBuy Rebates, P.O Box 1400, Orlando, FL";
     }
 }

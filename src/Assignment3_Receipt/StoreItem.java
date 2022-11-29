@@ -12,29 +12,18 @@ public class StoreItem {
     }
 
     public String getItemCode() {
+
         return itemCode;
     }
 
-    public String getItemDescription() {
-        return itemDescription;
-    }
-
     public double getItemPrice() {
+
         return itemPrice;
     }
 
-    public void setItemCode(String itemCode) {
-        this.itemCode = itemCode;
-    }
 
-    public void setItemDescription(String itemDescription) {
-        this.itemDescription = itemDescription;
-    }
-
-    public void setItemPrice(double itemPrice) {
-        this.itemPrice = itemPrice;
-    }
     public void printItem(){
+
         System.out.println(itemDescription + ": " + itemCode + " $" + itemPrice);
     }
 }

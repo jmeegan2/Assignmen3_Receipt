@@ -1,5 +1,5 @@
 package Assignment3_Receipt;
-
+///
 import java.util.*;
 public class Client {
 
@@ -23,7 +23,7 @@ public class Client {
         while (choice != 0) {
             ReceiptDate date;
             switch (choice) {
-                //Case 1 get the current date from users.
+                // get receipt date
                 case 1:
                     items.clearReceipt();
 
@@ -34,9 +34,11 @@ public class Client {
                     System.out.print("Enter the year: ");
                     currentYear = getInt(input,1,3000);
 
-                    receiptFactory.getDate(currentMonth,currentDate,currentYear);   //Set the current date in ReceiptFacotry Object
+                    //Set the current date in ReceiptFacotry Object if user choice case 1
+                    receiptFactory.getDate(currentMonth,currentDate,currentYear);
+
                     break;
-                //Case 2 Ask user inputs.
+                // display all available products to user.
                 case 2:
                     generateMenuItem(items,input);
                     break;
@@ -48,7 +50,7 @@ public class Client {
             }
             choice = menu(input, min, max);
         }
-        System.out.println("Menu Terminated");
+        System.out.println("Exited from Menu");
 
 
     }
@@ -87,21 +89,25 @@ public class Client {
 
     //method that generates hardcoded menu items.
     public static void generateMenuItem(PurchasedItems items,Scanner input) {
-        int ans;
+        int userInput;
         System.out.println("    Add items below to your cart.");
-        System.out.println("\t--------------------------------------------------------\n" +
+        System.out.println
+                ("\t--------------------------------------------------------\n" +
                 "\t1 – Television $450 \n" +
                 "\t2 – M1 Macbook Air $1150\n" +
                 "\t3 – Levi Jeans $35 #1406 item\n" +
                 "\t0 - Go to Checkout\n" +
                 "\t--------------------------------------------------------\n");
-        System.out.print("    Enter your choice: ");
-        ans = getInt(input, min, max);
 
-        if(ans == 1)
+        System.out.print("    Enter your choice: ");
+        userInput = getInt(input, min, max);
+
+        if(userInput == 1)
             items.addItem(new StoreItem("1001","Television",450));
-        else if(ans == 2)
+
+        else if(userInput == 2)
             items.addItem(new StoreItem("1000","M1 Macbook Air",1150));
+
         else
             //Only item eligible for maryland tax holiday, has to be clothing or footwear less than 100 dollars
             items.addItem(new StoreItem("1406","Levi Jeans",35));

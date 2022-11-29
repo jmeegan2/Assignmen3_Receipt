@@ -1,5 +1,5 @@
 package Assignment3_Receipt;
-
+////
 
 public class DETaxComputation extends TaxComputation{
     @Override
@@ -9,6 +9,7 @@ public class DETaxComputation extends TaxComputation{
     }
 
     @Override
+    //not needed since tax is always 0 percent
     protected boolean taxHoliday(ReceiptDate date) {
         return false;
     }

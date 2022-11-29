@@ -3,7 +3,7 @@ package Assignment3_Receipt;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
-
+//////
 
 public class ReceiptFactory{
 
@@ -123,11 +123,12 @@ public class ReceiptFactory{
             prop.setProperty("store_num", "143");
             prop.setProperty("store_addr", "602 Boulton St, Bel Air");
             prop.setProperty("phone","1-410-893-6101");
+            //CHANGE OF STATE CODE WILL AFFECT TAX COMPUTATION (MD,CA,DE,MA)
             prop.setProperty("state_code","MD");
 
 
             //save properties to project root folder
-            prop.store(new FileOutputStream("config.properties"), null);
+            prop.store(new FileOutputStream("configuration.properties"), null);
 
         } catch (IOException ex) {
             ex.printStackTrace();

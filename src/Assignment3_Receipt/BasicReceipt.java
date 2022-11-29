@@ -71,7 +71,7 @@ public class BasicReceipt implements Receipt {
         items.printItems(); //items will be display when method called
         System.out.println("Subtotal Cost: $" + decimalFormat.format(subTotalCost()));
         System.out.println("Tax: $" + decimalFormat.format(setTax()));
-        System.out.println("Total Cost: $"+ decimalFormat.format(subTotalCost()+setTax()));
+        System.out.println("Total Cost: $"+ decimalFormat.format(subTotalCost()+setTax()) + "\n");
 
     }
 }
